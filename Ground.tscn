@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlbh5veapyu0w"]
+
+[ext_resource type="PackedScene" uid="uid://gm4jvjvnn723" path="res://Newmaphand.blend" id="1_hkxet"]
+
+[node name="Ground" instance=ExtResource("1_hkxet")]
