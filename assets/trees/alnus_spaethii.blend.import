@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c5gv6nnxfwwta"
-path="res://.godot/imported/betula_utilis.blend-85226dbb56ceeaf588b1f838033c1f09.scn"
+uid="uid://xbumkiudaxhm"
+path="res://.godot/imported/alnus_spaethii.blend-e31dfac22446a6154e141a587df7dd5b.scn"
 
 [deps]
 
-source_file="res://betula_utilis.blend"
-dest_files=["res://.godot/imported/betula_utilis.blend-85226dbb56ceeaf588b1f838033c1f09.scn"]
+source_file="res://assets/trees/alnus_spaethii.blend"
+dest_files=["res://.godot/imported/alnus_spaethii.blend-e31dfac22446a6154e141a587df7dd5b.scn"]
 
 [params]
 

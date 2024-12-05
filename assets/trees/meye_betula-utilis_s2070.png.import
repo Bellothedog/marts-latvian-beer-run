@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2lgmgghkqpy6"
-path.s3tc="res://.godot/imported/meye_betula-pubescens_S0130.png-e539c3e57b24f5cdaae5b5a9a3e40315.s3tc.ctex"
+uid="uid://bhq0qigqpt8n7"
+path.s3tc="res://.godot/imported/meye_betula-utilis_s2070.png-659ca6e3c124ac68dfe955ebdebaff42.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://meye_betula-pubescens_S0130.png"
-dest_files=["res://.godot/imported/meye_betula-pubescens_S0130.png-e539c3e57b24f5cdaae5b5a9a3e40315.s3tc.ctex"]
+source_file="res://assets/trees/meye_betula-utilis_s2070.png"
+dest_files=["res://.godot/imported/meye_betula-utilis_s2070.png-659ca6e3c124ac68dfe955ebdebaff42.s3tc.ctex"]
 
 [params]
 

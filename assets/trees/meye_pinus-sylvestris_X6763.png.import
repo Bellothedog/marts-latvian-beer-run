@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7r4ado4kfj6x"
-path.s3tc="res://.godot/imported/meye_betula-utilis_s2070.png-5ea7dc7215bdb7696ebd30450c5ad85d.s3tc.ctex"
+uid="uid://cg74uobprboft"
+path.s3tc="res://.godot/imported/meye_pinus-sylvestris_X6763.png-844924e553c1b41f5ea6737d582780f1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://meye_betula-utilis_s2070.png"
-dest_files=["res://.godot/imported/meye_betula-utilis_s2070.png-5ea7dc7215bdb7696ebd30450c5ad85d.s3tc.ctex"]
+source_file="res://assets/trees/meye_pinus-sylvestris_X6763.png"
+dest_files=["res://.godot/imported/meye_pinus-sylvestris_X6763.png-844924e553c1b41f5ea6737d582780f1.s3tc.ctex"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dno3pmve3p0o"
-path="res://.godot/imported/pinus_sylvestris.blend-252cfc24cfa915998bb75dd10cd110f3.scn"
+uid="uid://droe1f5ec7d8m"
+path="res://.godot/imported/prunus_padus.blend-b362c3129b30dd2ff8404cedad2143fb.scn"
 
 [deps]
 
-source_file="res://pinus_sylvestris.blend"
-dest_files=["res://.godot/imported/pinus_sylvestris.blend-252cfc24cfa915998bb75dd10cd110f3.scn"]
+source_file="res://assets/trees/prunus_padus.blend"
+dest_files=["res://.godot/imported/prunus_padus.blend-b362c3129b30dd2ff8404cedad2143fb.scn"]
 
 [params]
 

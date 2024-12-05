@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpirppt6gc86s"
-path.s3tc="res://.godot/imported/meye_pinus-sylvestris_X6763.png-a12d92cc84bd51083f151815abf57aac.s3tc.ctex"
+uid="uid://btxrvlul451a8"
+path.s3tc="res://.godot/imported/Grass_For_Use_Of_Games.jpg-0640f22e5e5deb08fe915ab6045b4b6e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://meye_pinus-sylvestris_X6763.png"
-dest_files=["res://.godot/imported/meye_pinus-sylvestris_X6763.png-a12d92cc84bd51083f151815abf57aac.s3tc.ctex"]
+source_file="res://assets/world/Grass_For_Use_Of_Games.jpg"
+dest_files=["res://.godot/imported/Grass_For_Use_Of_Games.jpg-0640f22e5e5deb08fe915ab6045b4b6e.s3tc.ctex"]
 
 [params]
 

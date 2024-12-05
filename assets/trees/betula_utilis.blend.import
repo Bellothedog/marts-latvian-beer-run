@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://djt48qstxl3hn"
-path="res://.godot/imported/prunus_padus2.blend-368a3214ad90706f2f02d3b4cb129802.scn"
+uid="uid://c5gv6nnxfwwta"
+path="res://.godot/imported/betula_utilis.blend-f4412b0d91dbcc6c8606d56ae8fc84d1.scn"
 
 [deps]
 
-source_file="res://prunus_padus2.blend"
-dest_files=["res://.godot/imported/prunus_padus2.blend-368a3214ad90706f2f02d3b4cb129802.scn"]
+source_file="res://assets/trees/betula_utilis.blend"
+dest_files=["res://.godot/imported/betula_utilis.blend-f4412b0d91dbcc6c8606d56ae8fc84d1.scn"]
 
 [params]
 

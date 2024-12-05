@@ -1,21 +1,21 @@
 [gd_scene load_steps=25 format=3 uid="uid://bm62ahxw4srk1"]
 
-[ext_resource type="PackedScene" uid="uid://3f2su631yed0" path="res://Newmaphand.blend" id="1_8tjo3"]
-[ext_resource type="Script" path="res://addons/proton_scatter/src/scatter.gd" id="2_jufrb"]
-[ext_resource type="Script" path="res://addons/proton_scatter/src/stack/modifier_stack.gd" id="3_41a1v"]
-[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/base_modifier.gd" id="4_t7hp0"]
-[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/create_inside_random.gd" id="5_ml38t"]
-[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/randomize_transforms.gd" id="6_61nj8"]
-[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/relax.gd" id="7_2l376"]
-[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/offset_rotation.gd" id="9_20ue4"]
-[ext_resource type="Script" path="res://addons/proton_scatter/src/scatter_item.gd" id="10_d6srf"]
-[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/remove_outside_shapes.gd" id="10_gu1ku"]
-[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/offset_scale.gd" id="10_rj5lw"]
-[ext_resource type="Script" path="res://addons/proton_scatter/src/scatter_shape.gd" id="11_euxdt"]
-[ext_resource type="Script" path="res://addons/proton_scatter/src/shapes/path_shape.gd" id="12_tn0l6"]
+[ext_resource type="PackedScene" uid="uid://3f2su631yed0" path="res://assets/world/Newmaphand.blend" id="1_2kgbi"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/scatter.gd" id="2_03ivc"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/stack/modifier_stack.gd" id="3_wf5nc"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/base_modifier.gd" id="4_4gcc2"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/create_inside_random.gd" id="5_1i65u"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/randomize_transforms.gd" id="6_xtdyp"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/relax.gd" id="7_5rdkt"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/offset_rotation.gd" id="8_gy51q"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/offset_scale.gd" id="9_a7c74"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/remove_outside_shapes.gd" id="10_6wpge"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/scatter_item.gd" id="11_mox73"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/scatter_shape.gd" id="12_q15wa"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/shapes/path_shape.gd" id="13_8qedd"]
 
-[sub_resource type="Resource" id="Resource_bx5j6"]
-script = ExtResource("5_ml38t")
+[sub_resource type="Resource" id="Resource_cfd5r"]
+script = ExtResource("5_1i65u")
 amount = 6000
 enabled = true
 override_global_seed = false
@@ -23,8 +23,8 @@ custom_seed = 0
 restrict_height = true
 reference_frame = 1
 
-[sub_resource type="Resource" id="Resource_cg42h"]
-script = ExtResource("6_61nj8")
+[sub_resource type="Resource" id="Resource_8a6r7"]
+script = ExtResource("6_xtdyp")
 position = Vector3(0.15, 0.01, 0.15)
 rotation = Vector3(0, 360, 5)
 scale = Vector3(1, 1, 1)
@@ -34,8 +34,8 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_1qkp0"]
-script = ExtResource("7_2l376")
+[sub_resource type="Resource" id="Resource_bdsdb"]
+script = ExtResource("7_5rdkt")
 iterations = 3
 offset_step = 0.2
 consecutive_step_multiplier = 0.75
@@ -46,8 +46,8 @@ custom_seed = 0
 restrict_height = true
 reference_frame = 0
 
-[sub_resource type="Resource" id="Resource_4q6vh"]
-script = ExtResource("9_20ue4")
+[sub_resource type="Resource" id="Resource_4o15b"]
+script = ExtResource("8_gy51q")
 operation = 0
 rotation = Vector3(90, 0, 0)
 enabled = true
@@ -56,8 +56,8 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_utlkd"]
-script = ExtResource("10_rj5lw")
+[sub_resource type="Resource" id="Resource_6fkm3"]
+script = ExtResource("9_a7c74")
 operation = 1
 scale = Vector3(0.2, 0.2, 0.2)
 enabled = true
@@ -66,8 +66,8 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_bw08y"]
-script = ExtResource("10_gu1ku")
+[sub_resource type="Resource" id="Resource_udeqm"]
+script = ExtResource("10_6wpge")
 negative_shapes_only = false
 enabled = true
 override_global_seed = false
@@ -75,9 +75,9 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 0
 
-[sub_resource type="Resource" id="Resource_jxk86"]
-script = ExtResource("3_41a1v")
-stack = Array[ExtResource("4_t7hp0")]([SubResource("Resource_bx5j6"), SubResource("Resource_cg42h"), SubResource("Resource_1qkp0"), SubResource("Resource_4q6vh"), SubResource("Resource_utlkd"), SubResource("Resource_bw08y")])
+[sub_resource type="Resource" id="Resource_xjwmy"]
+script = ExtResource("3_wf5nc")
+stack = Array[ExtResource("4_4gcc2")]([SubResource("Resource_cfd5r"), SubResource("Resource_8a6r7"), SubResource("Resource_bdsdb"), SubResource("Resource_4o15b"), SubResource("Resource_6fkm3"), SubResource("Resource_udeqm")])
 
 [sub_resource type="Curve3D" id="Curve3D_ngxel"]
 _data = {
@@ -87,7 +87,7 @@ _data = {
 point_count = 61
 
 [sub_resource type="Resource" id="Resource_1do3p"]
-script = ExtResource("12_tn0l6")
+script = ExtResource("13_8qedd")
 closed = true
 thickness = 0.0
 curve = SubResource("Curve3D_ngxel")
@@ -100,55 +100,55 @@ _data = {
 point_count = 28
 
 [sub_resource type="Resource" id="Resource_g7qt3"]
-script = ExtResource("12_tn0l6")
+script = ExtResource("13_8qedd")
 closed = true
 thickness = 0.0
 curve = SubResource("Curve3D_erulg")
 
 [node name="Map" type="Node3D"]
 
-[node name="Ground" parent="." instance=ExtResource("1_8tjo3")]
+[node name="Ground" parent="." instance=ExtResource("1_2kgbi")]
 
 [node name="Trees" type="Node3D" parent="Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0906234, 0)
-script = ExtResource("2_jufrb")
-modifier_stack = SubResource("Resource_jxk86")
+script = ExtResource("2_03ivc")
+modifier_stack = SubResource("Resource_xjwmy")
 Performance/use_chunks = true
 Performance/chunk_dimensions = Vector3(15, 15, 15)
 
 [node name="Alnus" type="Node3D" parent="Ground/Trees"]
-script = ExtResource("10_d6srf")
-path = "res://alnus_spaethii.blend"
+script = ExtResource("11_mox73")
+path = "res://assets/trees/alnus_spaethii.blend"
 
 [node name="Betula" type="Node3D" parent="Ground/Trees"]
-script = ExtResource("10_d6srf")
-path = "res://betula_pubescens.blend"
+script = ExtResource("11_mox73")
+path = "res://assets/trees/betula_pubescens.blend"
 
 [node name="Betula2" type="Node3D" parent="Ground/Trees"]
-script = ExtResource("10_d6srf")
-path = "res://betula_utilis.blend"
+script = ExtResource("11_mox73")
+path = "res://assets/trees/betula_utilis.blend"
 
 [node name="Pinus" type="Node3D" parent="Ground/Trees"]
-script = ExtResource("10_d6srf")
-path = "res://pinus_sylvestris.blend"
+script = ExtResource("11_mox73")
+path = "res://assets/trees/pinus_sylvestris.blend"
 
 [node name="Prunus" type="Node3D" parent="Ground/Trees"]
-script = ExtResource("10_d6srf")
-path = "res://prunus_padus.blend"
+script = ExtResource("11_mox73")
+path = "res://assets/trees/prunus_padus.blend"
 
 [node name="Prunus2" type="Node3D" parent="Ground/Trees"]
-script = ExtResource("10_d6srf")
-path = "res://prunus_padus2.blend"
+script = ExtResource("11_mox73")
+path = "res://assets/trees/prunus_padus2.blend"
 
 [node name="ScatterShape" type="Node3D" parent="Ground/Trees"]
 transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, 0, 0)
 visible = false
-script = ExtResource("11_euxdt")
+script = ExtResource("12_q15wa")
 shape = SubResource("Resource_1do3p")
 
 [node name="ScatterShape2" type="Node3D" parent="Ground/Trees"]
 visible = false
-script = ExtResource("11_euxdt")
+script = ExtResource("12_q15wa")
 shape = SubResource("Resource_g7qt3")
 
 [node name="Häädemeeste" type="Node3D" parent="Ground"]

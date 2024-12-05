@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btxrvlul451a8"
-path.s3tc="res://.godot/imported/Grass_For_Use_Of_Games.jpg-9aa19cd23053424056724a42bdb23d0f.s3tc.ctex"
+uid="uid://bgcvf35ou6efx"
+path.s3tc="res://.godot/imported/meye_betula-pubescens_S0130.png-ea167789476383524cadd25dfd3dacfb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Grass_For_Use_Of_Games.jpg"
-dest_files=["res://.godot/imported/Grass_For_Use_Of_Games.jpg-9aa19cd23053424056724a42bdb23d0f.s3tc.ctex"]
+source_file="res://assets/trees/meye_betula-pubescens_S0130.png"
+dest_files=["res://.godot/imported/meye_betula-pubescens_S0130.png-ea167789476383524cadd25dfd3dacfb.s3tc.ctex"]
 
 [params]
 

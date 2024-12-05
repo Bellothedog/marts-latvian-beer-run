@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://3f2su631yed0"
-path="res://.godot/imported/Newmaphand.blend-3e8272dccd05b5dbe24bd4dbf13350f8.scn"
+path="res://.godot/imported/Newmaphand.blend-78b6833e29ca43251e2fe3838ce7866e.scn"
 
 [deps]
 
-source_file="res://Newmaphand.blend"
-dest_files=["res://.godot/imported/Newmaphand.blend-3e8272dccd05b5dbe24bd4dbf13350f8.scn"]
+source_file="res://assets/world/Newmaphand.blend"
+dest_files=["res://.godot/imported/Newmaphand.blend-78b6833e29ca43251e2fe3838ce7866e.scn"]
 
 [params]
 

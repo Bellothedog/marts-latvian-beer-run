@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dghcu374uqmup"
-path.s3tc="res://.godot/imported/TexturesCom_Roads0138_1_seamless_S.jpg-57c6cfb623a9008e2b5192e98237bfbb.s3tc.ctex"
+uid="uid://ds4oa4igqn71s"
+path.s3tc="res://.godot/imported/meye_prunus-padus_s8592.png-a3c8d31d4da65d99bb061262a436fd17.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://TexturesCom_Roads0138_1_seamless_S.jpg"
-dest_files=["res://.godot/imported/TexturesCom_Roads0138_1_seamless_S.jpg-57c6cfb623a9008e2b5192e98237bfbb.s3tc.ctex"]
+source_file="res://assets/trees/meye_prunus-padus_s8592.png"
+dest_files=["res://.godot/imported/meye_prunus-padus_s8592.png-a3c8d31d4da65d99bb061262a436fd17.s3tc.ctex"]
 
 [params]
 

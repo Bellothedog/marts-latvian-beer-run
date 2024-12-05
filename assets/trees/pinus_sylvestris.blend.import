@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c8w0tdhc3wvrx"
-path="res://.godot/imported/betula_pubescens.blend-58237eb3af0b71b9cd3c780dac9382f8.scn"
+uid="uid://dno3pmve3p0o"
+path="res://.godot/imported/pinus_sylvestris.blend-9d8e76ed4fc7e9998dc208e595865726.scn"
 
 [deps]
 
-source_file="res://betula_pubescens.blend"
-dest_files=["res://.godot/imported/betula_pubescens.blend-58237eb3af0b71b9cd3c780dac9382f8.scn"]
+source_file="res://assets/trees/pinus_sylvestris.blend"
+dest_files=["res://.godot/imported/pinus_sylvestris.blend-9d8e76ed4fc7e9998dc208e595865726.scn"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kd13a0crhsmx"
-path.s3tc="res://.godot/imported/meye_S3624_prunus-padus.png-be7912ba65573954986637cef16f9723.s3tc.ctex"
+uid="uid://diorjlnb4jovu"
+path.s3tc="res://.godot/imported/meye_alnus-spaethii_S4059.png-1b0a620e4b4b7785373fafe00b7265f1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://meye_S3624_prunus-padus.png"
-dest_files=["res://.godot/imported/meye_S3624_prunus-padus.png-be7912ba65573954986637cef16f9723.s3tc.ctex"]
+source_file="res://assets/trees/meye_alnus-spaethii_S4059.png"
+dest_files=["res://.godot/imported/meye_alnus-spaethii_S4059.png-1b0a620e4b4b7785373fafe00b7265f1.s3tc.ctex"]
 
 [params]
 
