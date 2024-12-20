@@ -1,7 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://bm62ahxw4srk1"]
+[gd_scene load_steps=31 format=3 uid="uid://bm62ahxw4srk1"]
 
-[ext_resource type="PackedScene" uid="uid://3f2su631yed0" path="res://assets/world/Newmaphand.blend" id="1_2kgbi"]
 [ext_resource type="Script" path="res://addons/proton_scatter/src/scatter.gd" id="2_03ivc"]
+[ext_resource type="PackedScene" uid="uid://cab2nnn0twx7i" path="res://scenes/newmaphand.tscn" id="2_v3cjw"]
 [ext_resource type="Script" path="res://addons/proton_scatter/src/stack/modifier_stack.gd" id="3_wf5nc"]
 [ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/base_modifier.gd" id="4_4gcc2"]
 [ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/create_inside_random.gd" id="5_1i65u"]
@@ -13,8 +13,9 @@
 [ext_resource type="Script" path="res://addons/proton_scatter/src/scatter_item.gd" id="11_mox73"]
 [ext_resource type="Script" path="res://addons/proton_scatter/src/scatter_shape.gd" id="12_q15wa"]
 [ext_resource type="Script" path="res://addons/proton_scatter/src/shapes/path_shape.gd" id="13_8qedd"]
+[ext_resource type="PackedScene" uid="uid://j6w5f2fipqg5" path="res://scenes/car.tscn" id="14_7j57m"]
 
-[sub_resource type="Resource" id="Resource_cfd5r"]
+[sub_resource type="Resource" id="Resource_56il4"]
 script = ExtResource("5_1i65u")
 amount = 6000
 enabled = true
@@ -23,7 +24,7 @@ custom_seed = 0
 restrict_height = true
 reference_frame = 1
 
-[sub_resource type="Resource" id="Resource_8a6r7"]
+[sub_resource type="Resource" id="Resource_ip1st"]
 script = ExtResource("6_xtdyp")
 position = Vector3(0.15, 0.01, 0.15)
 rotation = Vector3(0, 360, 5)
@@ -34,7 +35,7 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_bdsdb"]
+[sub_resource type="Resource" id="Resource_fnbv7"]
 script = ExtResource("7_5rdkt")
 iterations = 3
 offset_step = 0.2
@@ -46,7 +47,7 @@ custom_seed = 0
 restrict_height = true
 reference_frame = 0
 
-[sub_resource type="Resource" id="Resource_4o15b"]
+[sub_resource type="Resource" id="Resource_vtgu6"]
 script = ExtResource("8_gy51q")
 operation = 0
 rotation = Vector3(90, 0, 0)
@@ -56,7 +57,7 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_6fkm3"]
+[sub_resource type="Resource" id="Resource_ognkv"]
 script = ExtResource("9_a7c74")
 operation = 1
 scale = Vector3(0.2, 0.2, 0.2)
@@ -66,7 +67,7 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_udeqm"]
+[sub_resource type="Resource" id="Resource_50bgm"]
 script = ExtResource("10_6wpge")
 negative_shapes_only = false
 enabled = true
@@ -75,9 +76,9 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 0
 
-[sub_resource type="Resource" id="Resource_xjwmy"]
+[sub_resource type="Resource" id="Resource_qtrmp"]
 script = ExtResource("3_wf5nc")
-stack = Array[ExtResource("4_4gcc2")]([SubResource("Resource_cfd5r"), SubResource("Resource_8a6r7"), SubResource("Resource_bdsdb"), SubResource("Resource_4o15b"), SubResource("Resource_6fkm3"), SubResource("Resource_udeqm")])
+stack = Array[ExtResource("4_4gcc2")]([SubResource("Resource_56il4"), SubResource("Resource_ip1st"), SubResource("Resource_fnbv7"), SubResource("Resource_vtgu6"), SubResource("Resource_ognkv"), SubResource("Resource_50bgm")])
 
 [sub_resource type="Curve3D" id="Curve3D_ngxel"]
 _data = {
@@ -105,75 +106,105 @@ closed = true
 thickness = 0.0
 curve = SubResource("Curve3D_erulg")
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_6mexh"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_gj8ck"]
+seamless = true
+noise = SubResource("FastNoiseLite_6mexh")
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5gdv8"]
+sky_top_color = Color(0.207799, 0.662416, 1, 1)
+sky_horizon_color = Color(0.705564, 0.84136, 0.993956, 1)
+sky_cover = SubResource("NoiseTexture2D_gj8ck")
+
+[sub_resource type="Sky" id="Sky_y0h4w"]
+sky_material = SubResource("ProceduralSkyMaterial_5gdv8")
+
+[sub_resource type="Environment" id="Environment_uuegr"]
+background_mode = 2
+background_energy_multiplier = 0.8
+sky = SubResource("Sky_y0h4w")
+
 [node name="Map" type="Node3D"]
 
-[node name="Ground" parent="." instance=ExtResource("1_2kgbi")]
+[node name="Newmaphand" parent="." instance=ExtResource("2_v3cjw")]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
 
-[node name="Trees" type="Node3D" parent="Ground"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0906234, 0)
+[node name="Trees" type="Node3D" parent="Newmaphand"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 script = ExtResource("2_03ivc")
-modifier_stack = SubResource("Resource_xjwmy")
+modifier_stack = SubResource("Resource_qtrmp")
 Performance/use_chunks = true
 Performance/chunk_dimensions = Vector3(15, 15, 15)
 
-[node name="Alnus" type="Node3D" parent="Ground/Trees"]
+[node name="Alnus" type="Node3D" parent="Newmaphand/Trees"]
 script = ExtResource("11_mox73")
 path = "res://assets/trees/alnus_spaethii.blend"
 
-[node name="Betula" type="Node3D" parent="Ground/Trees"]
+[node name="Betula" type="Node3D" parent="Newmaphand/Trees"]
 script = ExtResource("11_mox73")
 path = "res://assets/trees/betula_pubescens.blend"
 
-[node name="Betula2" type="Node3D" parent="Ground/Trees"]
+[node name="Betula2" type="Node3D" parent="Newmaphand/Trees"]
 script = ExtResource("11_mox73")
 path = "res://assets/trees/betula_utilis.blend"
 
-[node name="Pinus" type="Node3D" parent="Ground/Trees"]
+[node name="Pinus" type="Node3D" parent="Newmaphand/Trees"]
 script = ExtResource("11_mox73")
 path = "res://assets/trees/pinus_sylvestris.blend"
 
-[node name="Prunus" type="Node3D" parent="Ground/Trees"]
+[node name="Prunus" type="Node3D" parent="Newmaphand/Trees"]
 script = ExtResource("11_mox73")
 path = "res://assets/trees/prunus_padus.blend"
 
-[node name="Prunus2" type="Node3D" parent="Ground/Trees"]
+[node name="Prunus2" type="Node3D" parent="Newmaphand/Trees"]
 script = ExtResource("11_mox73")
 path = "res://assets/trees/prunus_padus2.blend"
 
-[node name="ScatterShape" type="Node3D" parent="Ground/Trees"]
+[node name="ScatterShape" type="Node3D" parent="Newmaphand/Trees"]
 transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, 0, 0)
 visible = false
 script = ExtResource("12_q15wa")
 shape = SubResource("Resource_1do3p")
 
-[node name="ScatterShape2" type="Node3D" parent="Ground/Trees"]
+[node name="ScatterShape2" type="Node3D" parent="Newmaphand/Trees"]
 visible = false
 script = ExtResource("12_q15wa")
 shape = SubResource("Resource_g7qt3")
 
-[node name="Häädemeeste" type="Node3D" parent="Ground"]
+[node name="Häädemeeste" type="Node3D" parent="Newmaphand"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.71062, 0, -10.3575)
 
-[node name="Jaagupi" type="Node3D" parent="Ground"]
+[node name="Jaagupi" type="Node3D" parent="Newmaphand"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64558, 0, -7.06631)
 
-[node name="Kabli" type="Node3D" parent="Ground"]
+[node name="Kabli" type="Node3D" parent="Newmaphand"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2904, 0, -2.4845)
 
-[node name="Penu" type="Node3D" parent="Ground"]
+[node name="Penu" type="Node3D" parent="Newmaphand"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.35569, 0, -3.35569)
 
-[node name="Orajõe" type="Node3D" parent="Ground"]
+[node name="Orajõe" type="Node3D" parent="Newmaphand"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.6781)
 
-[node name="Treimani" type="Node3D" parent="Ground"]
+[node name="Treimani" type="Node3D" parent="Newmaphand"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.06479, 0, 6.22739)
 
-[node name="Metsapoole" type="Node3D" parent="Ground"]
+[node name="Metsapoole" type="Node3D" parent="Newmaphand"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.90396, 0, 8.06656)
 
-[node name="Ikla" type="Node3D" parent="Ground"]
+[node name="Ikla" type="Node3D" parent="Newmaphand"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09705, 0, 9.74441)
 
-[node name="Ainaži" type="Node3D" parent="Ground"]
+[node name="Ainaži" type="Node3D" parent="Newmaphand"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.09781, 0, 11.0673)
+
+[node name="ladamodel" parent="." instance=ExtResource("14_7j57m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.071, 1.17551, 8.18877)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_uuegr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.64679, 0.762668, 0, -0.762668, 0.64679, 0, 0, 0)
+shadow_enabled = true
