@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://cvsv6h1fv88lu"]
+
+[ext_resource type="PackedScene" uid="uid://br8h2atu7feyk" path="res://assets/car/lada_blue.glb" id="1_5dkkn"]
+[ext_resource type="Script" uid="uid://5yd5ckyyt8e7" path="res://scripts/car.gd" id="1_rims6"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5dkkn"]
+bounce = 0.1
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5dkkn"]
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_rims6"]
+
+[node name="Lada" type="RigidBody3D"]
+physics_material_override = SubResource("PhysicsMaterial_5dkkn")
+gravity_scale = 5.0
+angular_damp = 10.0
+script = ExtResource("1_rims6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_5dkkn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+visible = false
+mesh = SubResource("SphereMesh_rims6")
+
+[node name="lada_blue" parent="." instance=ExtResource("1_5dkkn")]
+top_level = true
+
+[node name="RayCast3D" type="RayCast3D" parent="lada_blue"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Camera3D" type="Camera3D" parent="lada_blue"]
+transform = Transform3D(-1, 0, 8.742277e-08, 2.3872492e-08, 0.9619943, 0.27306947, -8.4100215e-08, 0.27306947, -0.9619943, 0, 2.9378462, -6.3729105)

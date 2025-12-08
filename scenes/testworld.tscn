@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cduywkw56v8xo"]
+
+[ext_resource type="PackedScene" uid="uid://cvsv6h1fv88lu" path="res://scenes/lada.tscn" id="1_4ekwj"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rpf6u"]
+size = Vector2(50, 50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ekwj"]
+size = Vector3(50, 0.01, 50)
+
+[node name="Testworld" type="Node3D"]
+
+[node name="Lada" parent="." instance=ExtResource("1_4ekwj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.1215653, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_rpf6u")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_4ekwj")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.8838228, 0.46782184, 0, -0.46782184, 0.8838228, 0, 8.018445, 5.007578)
+light_energy = 1.2
