@@ -26,10 +26,56 @@ visible = false
 mesh = SubResource("SphereMesh_rims6")
 
 [node name="lada_blue" parent="." instance=ExtResource("1_5dkkn")]
+transform = Transform3D(0.585, 0, 0, 0, 0.585, 0, 0, 0, 0.585, 0, 0, 0)
 top_level = true
 
 [node name="RayCast3D" type="RayCast3D" parent="lada_blue"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(0.585, 0, 0, 0, 0.585, 0, 0, 0, 0.585, 0, 0.5, 0)
 
 [node name="Camera3D" type="Camera3D" parent="lada_blue"]
-transform = Transform3D(-1, 0, 8.742277e-08, 2.3872492e-08, 0.9619943, 0.27306947, -8.4100215e-08, 0.27306947, -0.9619943, 0, 2.9378462, -6.3729105)
+transform = Transform3D(-0.585, -9.603779e-09, 8.4975404e-08, 1.3965407e-08, 0.5627666, 0.15974563, -8.436835e-08, 0.15974563, -0.5627666, 0, 2.9378462, -6.3729105)
+
+[node name="SpotLight_FL" type="SpotLight3D" parent="lada_blue"]
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -0.785841, 0.9542351, 2.8997006)
+light_color = Color(1, 0.9607843, 0.8352941, 1)
+light_energy = 100.0
+spot_range = 50.0
+
+[node name="SpotLight_FR" type="SpotLight3D" parent="lada_blue"]
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0.786, 0.954, 2.9)
+light_color = Color(1, 0.9607843, 0.8352941, 1)
+light_energy = 100.0
+spot_range = 50.0
+spot_attenuation = 2.0
+
+[node name="Light_FR" type="OmniLight3D" parent="lada_blue"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.786, 0.954, 2.765)
+light_color = Color(1, 0.9607843, 0.8352941, 1)
+light_energy = 0.75
+
+[node name="Light_RR" type="OmniLight3D" parent="lada_blue"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6718266, 1.0457121, -2.700998)
+light_color = Color(1, 0.27058825, 0.26666668, 1)
+light_energy = 1.575
+omni_range = 0.443
+
+[node name="Light_RL" type="OmniLight3D" parent="lada_blue"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.672, 1.046, -2.701)
+light_color = Color(1, 0.27058825, 0.26666668, 1)
+light_energy = 1.575
+omni_range = 0.443
+
+[node name="Light_FL" type="OmniLight3D" parent="lada_blue"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.786, 0.954, 2.765)
+light_color = Color(1, 0.9607843, 0.8352941, 1)
+light_energy = 0.75
+
+[node name="Blink_FR" type="OmniLight3D" parent="lada_blue"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.84610915, 0.6762866, 2.8372018)
+light_color = Color(0.9882353, 0.6313726, 0.011764706, 1)
+light_energy = 0.1
+
+[node name="Blink_FL" type="OmniLight3D" parent="lada_blue"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.846, 0.676, 2.837)
+light_color = Color(0.9882353, 0.6313726, 0.011764706, 1)
+light_energy = 0.1

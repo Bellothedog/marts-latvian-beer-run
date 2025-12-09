@@ -23,4 +23,5 @@ shape = SubResource("BoxShape3D_4ekwj")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.8838228, 0.46782184, 0, -0.46782184, 0.8838228, 0, 8.018445, 5.007578)
+visible = false
 light_energy = 1.2

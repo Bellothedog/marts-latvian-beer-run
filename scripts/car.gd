@@ -7,7 +7,7 @@ extends RigidBody3D
 # For offsetting car mesh position relative to the sphere
 var sphere_offset = Vector3.DOWN
 # Engine power
-var acceleration = 35.0
+var acceleration = 35.0 * 1.4 # Km/h * scale up for game engine
 # Turm amount (deg)
 var steering = 18.0
 # Turn speed
