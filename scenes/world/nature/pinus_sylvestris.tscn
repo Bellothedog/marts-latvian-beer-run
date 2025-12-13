@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bprlr86cybdj8"]
+
+[ext_resource type="PackedScene" uid="uid://dno3pmve3p0o" path="res://assets/trees/pinus_sylvestris.blend" id="1_csneg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_swk18"]
+size = Vector3(0.39788818, 0.56085205, 0.4647522)
+
+[node name="pinus_sylvestris" instance=ExtResource("1_csneg")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="pinus_sylvestris2" index="0"]
+transform = Transform3D(0, 0, -1, 1, 0, 0, 0, -1, 0, -0.02680609, 0, 0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pinus_sylvestris2/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0284729, 0.28157872, -0.016586307)
+shape = SubResource("BoxShape3D_swk18")

@@ -1,0 +1,741 @@
+[gd_scene load_steps=33 format=3 uid="uid://c7nh5xswtapo"]
+
+[ext_resource type="PackedScene" uid="uid://cvsv6h1fv88lu" path="res://scenes/lada.tscn" id="1_7aawi"]
+[ext_resource type="Texture2D" uid="uid://cpjef58gdxg6h" path="res://assets/world/grass.png" id="1_n54hm"]
+[ext_resource type="Texture2D" uid="uid://ixm4gqkqseuj" path="res://assets/reference/häädemeeste.png" id="3_7a86j"]
+[ext_resource type="Texture2D" uid="uid://dl1pm4gbh8t07" path="res://assets/world/path.png" id="4_pg6is"]
+[ext_resource type="PackedScene" uid="uid://clqyq4holjhyv" path="res://scenes/houses/house_1_dark.tscn" id="5_tfhvf"]
+[ext_resource type="PackedScene" uid="uid://bcvvyn2e21pi2" path="res://scenes/world/nature/prunus_padus.tscn" id="6_caeh6"]
+[ext_resource type="PackedScene" uid="uid://dhg7ycfkyyrxj" path="res://scenes/world/nature/prunus_padus_2.tscn" id="7_nne7s"]
+[ext_resource type="PackedScene" uid="uid://d5r10jktbt7d" path="res://scenes/houses/house_3_light.tscn" id="8_nne7s"]
+[ext_resource type="PackedScene" uid="uid://bprlr86cybdj8" path="res://scenes/world/nature/pinus_sylvestris.tscn" id="9_frji8"]
+[ext_resource type="PackedScene" uid="uid://besg8xhhyeva7" path="res://scenes/world/nature/alnus_spaethii.tscn" id="10_7ie1h"]
+[ext_resource type="PackedScene" uid="uid://dumxyxjwlch04" path="res://scenes/world/nature/betula_utilis.tscn" id="11_ok0ku"]
+[ext_resource type="PackedScene" uid="uid://bs5xgmkf3m6kj" path="res://scenes/houses/house_1_light.tscn" id="12_oyc7n"]
+[ext_resource type="PackedScene" uid="uid://bhd7knx8g3xhb" path="res://scenes/world/nature/betula_pubescens.tscn" id="13_4j3wn"]
+[ext_resource type="PackedScene" uid="uid://dttotwqjq45lp" path="res://scenes/houses/house_5_dark.tscn" id="14_4j3wn"]
+[ext_resource type="PackedScene" uid="uid://baqoja0quqc7p" path="res://scenes/houses/house_3_dark.tscn" id="15_baqnl"]
+[ext_resource type="PackedScene" uid="uid://dqgun72id23i7" path="res://scenes/world/nature/mets.tscn" id="16_j3d2f"]
+[ext_resource type="PackedScene" uid="uid://bigll2mrnew8m" path="res://scenes/houses/house_1_mid.tscn" id="17_pw4co"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7a86j"]
+albedo_texture = ExtResource("1_n54hm")
+uv1_triplanar = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1m8av"]
+material = SubResource("StandardMaterial3D_7a86j")
+size = Vector2(265, 635)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n54hm"]
+size = Vector3(265, 0, 635)
+
+[sub_resource type="Curve3D" id="Curve3D_n54hm"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 57.428417, 316.31638, -2.7179718e-05, 2.5070176, 5.9797363, 2.3841858e-07, -2.5070176, -5.9797363, -2.3841858e-07, 5.4265575, 174.13559, -3.33786e-05, 3.7566109, 6.04747, 2.3841858e-07, -3.7566109, -6.04747, -2.3841858e-07, -30.309484, 101.407166, -3.6597252e-05, 1.1655045, 3.6547012, 2.3841858e-07, -1.1655045, -3.6547012, -2.3841858e-07, -101.711, -68.89, 0, -0.006439209, 2.8661957, 1.1920929e-07, 0.006439209, -2.8661957, -1.1920929e-07, -119.96963, -131.05643, -4.673004e-05, 0, 0, 0, 0, 0, 0, -117.12666, -192.22481, -4.9352646e-05, 11.504974, 64.49756, 2.861023e-06, -11.504974, -64.49756, -2.861023e-06, -116.23068, -316.22534, -5.4836273e-05),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tfhvf"]
+albedo_texture = ExtResource("4_pg6is")
+uv1_scale = Vector3(0.25, 10, 1)
+
+[sub_resource type="Curve3D" id="Curve3D_pg6is"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 34.86033, 270.79022, 1.1861324e-05, 19.921173, 46.00847, 2.0110942e-06, -19.921173, -46.00847, -2.0110942e-06, 17.217054, 132.03015, 5.7712214e-06, 5.6917725, 7.1147156, 3.109942e-07, -5.6917725, -7.1147156, -3.109942e-07, -6.4986134, 60.883022, 2.6612815e-06, 0, 0, 0, 0, 0, 0, -52.507095, 56.13988, 2.4539522e-06),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
+
+[sub_resource type="FogMaterial" id="FogMaterial_baqnl"]
+density = 8.0
+albedo = Color(0, 0, 0, 1)
+
+[sub_resource type="Curve3D" id="Curve3D_baqnl"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -78.08711, 0, 0.093316615, 1.7956009, 0, -0.0641284, -1.7956009, 0, 0.0641284, -106.0324, 0, -3.8642395, 0, 0, 0, 0, 0, 0, -132.90228, 0, -0.52955353),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[sub_resource type="Animation" id="Animation_pw4co"]
+resource_name = "SunRotation"
+length = 720.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 720),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.5707964, 0, 0), Vector3(4.712389, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:light_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 179.93333, 540.0333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 0.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_g8aqn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5707964, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:light_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g8aqn"]
+_data = {
+&"RESET": SubResource("Animation_g8aqn"),
+&"SunRotation": SubResource("Animation_pw4co")
+}
+
+[sub_resource type="Environment" id="Environment_pw4co"]
+background_mode = 1
+background_color = Color(0.30859375, 0.788511, 1, 1)
+ambient_light_color = Color(0.30980393, 0.7882353, 1, 1)
+
+[sub_resource type="Animation" id="Animation_i1g43"]
+resource_name = "SkyColor"
+length = 720.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:environment:background_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 120),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.30859375, 0.788511, 1, 1), Color(0, 0.028778076, 0.16015625, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:environment:ambient_light_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 120),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.30980393, 0.7882353, 1, 1), Color(0, 0.02745098, 0.16078432, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tv2l3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:environment:background_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.30859375, 0.788511, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:environment:ambient_light_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.30980393, 0.7882353, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_se14n"]
+_data = {
+&"RESET": SubResource("Animation_tv2l3"),
+&"SkyColor": SubResource("Animation_i1g43")
+}
+
+[node name="Häädemeeste" type="Node3D"]
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_1m8av")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+shape = SubResource("BoxShape3D_n54hm")
+
+[node name="Lada" parent="." instance=ExtResource("1_7aawi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.095062, 2.2520633, -56.92374)
+
+[node name="PärnuMaantee" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+curve = SubResource("Curve3D_n54hm")
+
+[node name="PärnuMaanteeCSG" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 6, 1, 6, 1, 0)
+mode = 2
+path_node = NodePath("../PärnuMaantee")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_tfhvf")
+
+[node name="KooliCSG" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 6, 1, 6, 1, 0)
+mode = 2
+path_node = NodePath("../Kooli")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_tfhvf")
+
+[node name="Kooli" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -1, 0)
+curve = SubResource("Curve3D_pg6is")
+
+[node name="Reference" type="Sprite3D" parent="."]
+transform = Transform3D(-80, 6.9938224e-06, 3.0570967e-13, 0, -3.4969112e-06, 80, 6.9938224e-06, 80, 3.4969112e-06, 0, 1, 0)
+visible = false
+modulate = Color(1, 1, 1, 0.22745098)
+texture = ExtResource("3_7a86j")
+
+[node name="house12" parent="." instance=ExtResource("5_tfhvf")]
+transform = Transform3D(0.9130906, 0, -0.40775675, 0, 1, 0, 0.40775675, 0, 0.9130906, -39.57405, 0, -67.36339)
+
+[node name="house19" parent="." instance=ExtResource("5_tfhvf")]
+transform = Transform3D(0.9130906, 0, -0.40775675, 0, 1, 0, 0.40775675, 0, 0.9130906, -62.463192, 0, -13.910934)
+
+[node name="prunus_padus" parent="." instance=ExtResource("6_caeh6")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -45.954243, 9.685755e-08, -62.435425)
+
+[node name="prunus_padus2" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -47.19925, 9.685755e-08, -58.64236)
+
+[node name="prunus_padus30" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -55.6859, 9.685755e-08, -37.208275)
+
+[node name="house32" parent="." instance=ExtResource("8_nne7s")]
+transform = Transform3D(-0.922012, 0, 0.38716152, 0, 1, 0, -0.38716152, 0, -0.922012, -57.188908, 0, -63.09082)
+
+[node name="house32" parent="house32" instance=ExtResource("8_nne7s")]
+transform = Transform3D(0.9973995, 0, -0.07207179, 0, 1, 0, 0.07207179, 0, 0.9973995, -16.522629, 0, 82.40385)
+
+[node name="house33" parent="." instance=ExtResource("8_nne7s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.554323, 0, -66.78859)
+
+[node name="house36" parent="." instance=ExtResource("8_nne7s")]
+transform = Transform3D(-0.40316197, 0, -0.9151286, 0, 1, 0, 0.9151286, 0, -0.40316197, -17.201694, 0, -109.41583)
+
+[node name="house35" parent="." instance=ExtResource("8_nne7s")]
+transform = Transform3D(-0.2943073, 0, -0.95571095, 0, 1, 0, 0.95571095, 0, -0.2943073, -82.27297, 0, -11.747051)
+
+[node name="pinus_sylvestris" parent="." instance=ExtResource("9_frji8")]
+transform = Transform3D(6.356337, 0, 2.9320605, 0, 7, 0, -2.9320605, 0, 6.356337, -35.182537, -4.7683716e-07, -58.08819)
+
+[node name="pinus_sylvestris2" parent="." instance=ExtResource("9_frji8")]
+transform = Transform3D(5.4614086, 0, 4.3787003, 0, 6.3039846, 0, -4.3787003, 0, 5.4614086, -32.281235, -4.7683716e-07, -60.537663)
+
+[node name="pinus_sylvestris3" parent="." instance=ExtResource("9_frji8")]
+transform = Transform3D(5.4614086, 0, 4.3787003, 0, 8.565498, 0, -4.3787003, 0, 5.4614086, -32.281235, -4.7683716e-07, -64.96741)
+
+[node name="alnus_spaethii" parent="." instance=ExtResource("10_7ie1h")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -58.487625, 9.685755e-08, -54.559837)
+
+[node name="alnus_spaethii2" parent="." instance=ExtResource("10_7ie1h")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -61.8653, 9.685755e-08, -53.543858)
+
+[node name="alnus_spaethii3" parent="." instance=ExtResource("10_7ie1h")]
+transform = Transform3D(7, 0, 0, 0, 6.3824024, 0, 0, 0, 7, -59.43199, 9.685755e-08, -51.712833)
+
+[node name="alnus_spaethii4" parent="." instance=ExtResource("10_7ie1h")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -63.088844, 9.685755e-08, -51.59992)
+
+[node name="betula_utilis" parent="." instance=ExtResource("11_ok0ku")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -61.493423, 9.685755e-08, -49.495003)
+
+[node name="house13" parent="." instance=ExtResource("12_oyc7n")]
+transform = Transform3D(-0.9163208, 0, 0.40044504, 0, 1, 0, -0.40044504, 0, -0.9163208, -67.77155, 0.03746319, -45.720703)
+
+[node name="prunus_padus3" parent="." instance=ExtResource("6_caeh6")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -63.268425, 9.685755e-08, -41.183163)
+
+[node name="betula_utilis2" parent="." instance=ExtResource("11_ok0ku")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -62.197826, 9.685755e-08, -43.757713)
+
+[node name="alnus_spaethii5" parent="." instance=ExtResource("10_7ie1h")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -60.840675, 9.685755e-08, -46.374813)
+
+[node name="betula_pubescens" parent="." instance=ExtResource("13_4j3wn")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -21.654089, 5.736947e-07, -61.894783)
+
+[node name="prunus_padus4" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -19.483463, 0, -58.52638)
+
+[node name="prunus_padus5" parent="." instance=ExtResource("6_caeh6")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -22.565094, 0, -56.889732)
+
+[node name="prunus_padus6" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -14.70754, 0, -70.16325)
+
+[node name="alnus_spaethii6" parent="." instance=ExtResource("10_7ie1h")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -15.199597, 9.536743e-07, -58.80483)
+
+[node name="pinus_sylvestris4" parent="." instance=ExtResource("9_frji8")]
+transform = Transform3D(7.72278, 0, 0, 0, 8.573274, 0, 0, 0, 8.684444, -19.306082, 0, -66.04303)
+
+[node name="house52" parent="." instance=ExtResource("14_4j3wn")]
+transform = Transform3D(-0.93971056, 0, 0.34197092, 0, 1, 0, -0.34197092, 0, -0.93971056, -9.552694, 2.3841858e-07, -67.72102)
+
+[node name="house55" parent="." instance=ExtResource("14_4j3wn")]
+transform = Transform3D(0.51711607, 0, 0.8559153, 0, 1, 0, -0.8559153, 0, 0.51711607, 12.691587, 2.3841858e-07, -53.615723)
+
+[node name="betula_utilis3" parent="." instance=ExtResource("11_ok0ku")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -14.597935, 9.685755e-08, -62.80549)
+
+[node name="prunus_padus7" parent="." instance=ExtResource("6_caeh6")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -11.116764, 9.685755e-08, -60.892494)
+
+[node name="prunus_padus17" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(-5.536622, 0, -4.283203, 0, 7, 0, 4.283203, 0, -5.536622, 1.6002393, 0, -59.367943)
+
+[node name="pinus_sylvestris10" parent="." instance=ExtResource("9_frji8")]
+transform = Transform3D(-6.1083007, 0, -5.3138905, 0, 8.573275, 0, 4.7254615, 0, -6.868925, 0.6184535, 0, -56.658752)
+
+[node name="betula_utilis11" parent="." instance=ExtResource("11_ok0ku")]
+transform = Transform3D(-5.536622, 0, -4.283203, 0, 7, 0, 4.283203, 0, -5.536622, -3.1224785, 9.685755e-08, -54.537334)
+
+[node name="prunus_padus18" parent="." instance=ExtResource("6_caeh6")]
+transform = Transform3D(-5.536622, 0, -4.283203, 0, 7, 0, 4.283203, 0, -5.536622, -3.5695748, 9.685755e-08, -52.377007)
+
+[node name="betula_utilis4" parent="." instance=ExtResource("11_ok0ku")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -4.462274, 0, -72.732254)
+
+[node name="pinus_sylvestris5" parent="." instance=ExtResource("9_frji8")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -4.4360414, 9.685755e-08, -76.16611)
+
+[node name="betula_pubescens2" parent="." instance=ExtResource("13_4j3wn")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -8.953532, -1.8104911e-06, -74.687874)
+
+[node name="betula_utilis5" parent="." instance=ExtResource("11_ok0ku")]
+transform = Transform3D(7, 0, 0, 0, 8.85327, 0, 0, 0, 7, -7.9454837, 9.685755e-08, -78.19434)
+
+[node name="pinus_sylvestris6" parent="." instance=ExtResource("9_frji8")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -13.157272, 9.685755e-08, -76.22975)
+
+[node name="prunus_padus8" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -2.7217555, 0, -79.36861)
+
+[node name="alnus_spaethii7" parent="." instance=ExtResource("10_7ie1h")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -6.950058, 1.1920929e-07, -81.60849)
+
+[node name="alnus_spaethii13" parent="." instance=ExtResource("10_7ie1h")]
+transform = Transform3D(6.431683, 0, 2.76287, 0, 7, 0, -2.76287, 0, 6.431683, -10.588126, 1.1920929e-07, -80.34236)
+
+[node name="alnus_spaethii8" parent="." instance=ExtResource("10_7ie1h")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -0.4714861, 9.685755e-08, -85.57703)
+
+[node name="betula_pubescens3" parent="." instance=ExtResource("13_4j3wn")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -3.5540285, 0, -82.699135)
+
+[node name="pinus_sylvestris7" parent="." instance=ExtResource("9_frji8")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -9.17869, 9.685755e-08, -85.12627)
+
+[node name="prunus_padus9" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 0.06341362, 9.685755e-08, -88.08865)
+
+[node name="alnus_spaethii9" parent="." instance=ExtResource("10_7ie1h")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -4.8083515, 0, -86.942375)
+
+[node name="betula_utilis6" parent="." instance=ExtResource("11_ok0ku")]
+transform = Transform3D(7, 0, 0, 0, 8.352673, 0, 0, 0, 7, -4.33881, 0, -91.31295)
+
+[node name="house14" parent="." instance=ExtResource("5_tfhvf")]
+transform = Transform3D(0.97356296, 0, -0.22841883, 0, 1, 0, 0.22841883, 0, 0.97356296, -1.1362553, 9.536743e-07, -97.41696)
+
+[node name="house21" parent="." instance=ExtResource("5_tfhvf")]
+transform = Transform3D(-0.031881705, 0, -0.99949163, 0, 1, 0, 0.99949163, 0, -0.031881705, -19.344995, 9.536743e-07, -35.078705)
+
+[node name="house15" parent="." instance=ExtResource("12_oyc7n")]
+transform = Transform3D(0.22592023, 0, 0.9741458, 0, 1, 0, -0.9741458, 0, 0.22592023, -1.0166273, 0, -110.46006)
+
+[node name="house22" parent="." instance=ExtResource("12_oyc7n")]
+transform = Transform3D(0.6939676, 0, -0.72000617, 0, 1, 0, 0.72000617, 0, 0.6939676, 4.0863047, 0, -44.900272)
+
+[node name="prunus_padus10" parent="." instance=ExtResource("6_caeh6")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 5.480999, -8.5681677e-07, -103.75023)
+
+[node name="prunus_padus11" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(7, 0, 0, 0, 8.118143, 0, 0, 0, 7, -4.008751, 0, -105.04681)
+
+[node name="betula_utilis7" parent="." instance=ExtResource("11_ok0ku")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 0.24522018, 0, -104.0713)
+
+[node name="pinus_sylvestris8" parent="." instance=ExtResource("9_frji8")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 8.036758, 9.685755e-08, -115.658554)
+
+[node name="betula_pubescens4" parent="." instance=ExtResource("13_4j3wn")]
+transform = Transform3D(8.987652, 0, 0, 0, 9.704653, 0, 0, 0, 8.140105, 2.976715, 0, -117.59363)
+
+[node name="house54" parent="." instance=ExtResource("14_4j3wn")]
+transform = Transform3D(0.940187, 0, -0.34065858, 0, 1, 0, 0.34065858, 0, 0.940187, 20.473871, 2.3841858e-07, -112.470245)
+
+[node name="house54" parent="house54" instance=ExtResource("14_4j3wn")]
+transform = Transform3D(0.94018716, 0, -0.34065872, 0, 1, 0, 0.34065872, 0, 0.94018716, -29.44881, 2.3841858e-07, -76.65833)
+
+[node name="house58" parent="." instance=ExtResource("14_4j3wn")]
+transform = Transform3D(0.46527478, 0, 0.88516635, 0, 1, 0, -0.88516635, 0, 0.46527478, -16.715378, 2.3841858e-07, -119.271034)
+
+[node name="house56" parent="." instance=ExtResource("14_4j3wn")]
+transform = Transform3D(0.940187, 0, -0.34065858, 0, 1, 0, 0.34065858, 0, 0.940187, -41.465267, 2.3841858e-07, -34.00506)
+
+[node name="pinus_sylvestris11" parent="." instance=ExtResource("9_frji8")]
+transform = Transform3D(-6.9999924, 0, -0.0097732395, 0, 6.9999986, 0, 0.0097732395, 0, -6.9999924, 15.369015, 9.685755e-08, -104.01802)
+
+[node name="betula_utilis12" parent="." instance=ExtResource("11_ok0ku")]
+transform = Transform3D(-6.9999933, 0, -0.009773195, 0, 8.85327, 0, 0.009773195, 0, -6.9999933, 18.881285, 9.685755e-08, -101.99468)
+
+[node name="prunus_padus19" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(-6.9999924, 0, -0.0097732395, 0, 6.9999986, 0, 0.0097732395, 0, -6.9999924, 13.659201, 0, -100.813126)
+
+[node name="prunus_padus27" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(-6.9999924, 0, -0.0097732395, 0, 6.9999986, 0, 0.0097732395, 0, -6.9999924, 17.38775, 0, -89.15153)
+
+[node name="alnus_spaethii11" parent="." instance=ExtResource("10_7ie1h")]
+transform = Transform3D(-6.9999924, 0, -0.0097732395, 0, 6.9999986, 0, 0.0097732395, 0, -6.9999924, 11.417601, 9.685755e-08, -94.60158)
+
+[node name="betula_pubescens6" parent="." instance=ExtResource("13_4j3wn")]
+transform = Transform3D(-6.9999924, 0, -0.0097732395, 0, 6.9999986, 0, 0.0097732395, 0, -6.9999924, 14.496122, 0, -97.48377)
+
+[node name="prunus_padus20" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(-6.9999924, 0, -0.0097732395, 0, 6.9999986, 0, 0.0097732395, 0, -6.9999924, 10.886209, 9.685755e-08, -92.0892)
+
+[node name="alnus_spaethii12" parent="." instance=ExtResource("10_7ie1h")]
+transform = Transform3D(-6.9999924, 0, -0.0097732395, 0, 6.9999986, 0, 0.0097732395, 0, -6.9999924, 17.502232, 0, -93.24229)
+
+[node name="alnus_spaethii15" parent="." instance=ExtResource("10_7ie1h")]
+transform = Transform3D(-6.9999924, 0, -0.0097732395, 0, 6.9999986, 0, 0.0097732395, 0, -6.9999924, 11.964366, 0, -96.93774)
+
+[node name="house17" parent="." instance=ExtResource("5_tfhvf")]
+transform = Transform3D(-0.97388095, 0, 0.22705933, 0, 1, 0, -0.22705933, 0, -0.97388095, 11.315781, 9.536743e-07, -82.76257)
+
+[node name="house18" parent="." instance=ExtResource("12_oyc7n")]
+transform = Transform3D(-0.22455993, 0, -0.97446024, 0, 1, 0, 0.97446024, 0, -0.22455993, 11.997482, 0, -69.71932)
+
+[node name="house20" parent="." instance=ExtResource("12_oyc7n")]
+transform = Transform3D(0.38144144, 0, 0.92439294, 0, 1, 0, -0.92439294, 0, 0.38144144, -56.3272, 0, -24.108774)
+
+[node name="prunus_padus21" parent="." instance=ExtResource("6_caeh6")]
+transform = Transform3D(-6.9999924, 0, -0.0097732395, 0, 6.9999986, 0, 0.0097732395, 0, -6.9999924, 5.490495, -8.5681677e-07, -76.42009)
+
+[node name="prunus_padus22" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(-6.9999943, 0, -0.009773165, 0, 8.118144, 0, 0.009773165, 0, -6.9999943, 14.982046, 0, -75.13676)
+
+[node name="betula_utilis13" parent="." instance=ExtResource("11_ok0ku")]
+transform = Transform3D(-6.9999924, 0, -0.0097732395, 0, 6.9999986, 0, 0.0097732395, 0, -6.9999924, 10.726717, 0, -76.10633)
+
+[node name="pinus_sylvestris12" parent="." instance=ExtResource("9_frji8")]
+transform = Transform3D(-6.9999924, 0, -0.0097732395, 0, 6.9999986, 0, 0.0097732395, 0, -6.9999924, 3.8348026, 9.685755e-08, -63.64143)
+
+[node name="betula_pubescens7" parent="." instance=ExtResource("13_4j3wn")]
+transform = Transform3D(-8.987645, 0, -0.011365056, 0, 9.704653, 0, 0.012548238, 0, -8.1401, 8.014104, 0, -62.580193)
+
+[node name="house34" parent="." instance=ExtResource("15_baqnl")]
+transform = Transform3D(-0.91298383, 0, 0.4079958, 0, 1, 0, -0.4079958, 0, -0.91298383, -49.308994, 0, -42.916157)
+
+[node name="prunus_padus12" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -52.137703, 0, -48.901016)
+
+[node name="prunus_padus13" parent="." instance=ExtResource("6_caeh6")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -42.46408, 0, -48.783478)
+
+[node name="betula_pubescens5" parent="." instance=ExtResource("13_4j3wn")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -43.20279, 0, -43.000744)
+
+[node name="pinus_sylvestris9" parent="." instance=ExtResource("9_frji8")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -40.10172, 0, -44.21783)
+
+[node name="alnus_spaethii10" parent="." instance=ExtResource("10_7ie1h")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -39.345554, 0, -48.857048)
+
+[node name="house16" parent="." instance=ExtResource("12_oyc7n")]
+transform = Transform3D(-0.045502488, 0, 0.99896425, 0, 1, 0, -0.99896425, 0, -0.045502488, -31.909775, 0, -43.240723)
+
+[node name="betula_utilis8" parent="." instance=ExtResource("11_ok0ku")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -31.85325, 0, -48.815716)
+
+[node name="prunus_padus14" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(6.214202, 0, -3.2223744, 0, 7, 0, 3.2223744, 0, 6.214202, -25.325663, 9.685755e-08, -49.08369)
+
+[node name="betula_utilis9" parent="." instance=ExtResource("11_ok0ku")]
+transform = Transform3D(8.045776, 0, 0, 0, 8.906826, 0, 0, 0, 9.596272, -18.602476, 9.685755e-08, -43.09669)
+
+[node name="prunus_padus15" parent="." instance=ExtResource("6_caeh6")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -19.842258, 9.685755e-08, -45.989098)
+
+[node name="betula_utilis10" parent="." instance=ExtResource("11_ok0ku")]
+transform = Transform3D(6.6942515, 0, 1.6325148, 0, 7.2007575, 0, -1.3606224, 0, 8.03196, -17.557245, 0, -48.64791)
+
+[node name="prunus_padus16" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -15.37966, 0, -46.506294)
+
+[node name="house53" parent="." instance=ExtResource("14_4j3wn")]
+transform = Transform3D(0.2695081, 0, -0.96299815, 0, 1, 0, 0.96299815, 0, 0.2695081, -9.160744, 2.3841858e-07, -47.535133)
+
+[node name="house57" parent="." instance=ExtResource("14_4j3wn")]
+transform = Transform3D(-0.3811511, 0, -0.92451274, 0, 1, 0, 0.92451274, 0, -0.3811511, -34.365173, 2.3841858e-07, -81.149506)
+
+[node name="ViaFog" type="FogVolume" parent="."]
+transform = Transform3D(0.9903626, 0, 0.13849902, 0, 1, 0, -0.13849902, 0, 0.9903626, -130.75018, 1, -3.8937988)
+size = Vector3(5, 5, 8)
+material = SubResource("FogMaterial_baqnl")
+
+[node name="Uulu" type="Path3D" parent="."]
+curve = SubResource("Curve3D_baqnl")
+
+[node name="UuluCSG" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9, 0)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 6, 0, 6, 1, 0, 1)
+mode = 2
+path_node = NodePath("../Uulu")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_tfhvf")
+
+[node name="alnus_spaethii14" parent="." instance=ExtResource("10_7ie1h")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -91.24998, 0, -9.726944)
+
+[node name="betula_pubescens8" parent="." instance=ExtResource("13_4j3wn")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -89.6734, 1.1920929e-07, -12.823351)
+
+[node name="prunus_padus23" parent="." instance=ExtResource("6_caeh6")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -94.13898, 1.1920929e-07, -9.713013)
+
+[node name="betula_utilis14" parent="." instance=ExtResource("11_ok0ku")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -75.226944, 0, -12.758896)
+
+[node name="pinus_sylvestris13" parent="." instance=ExtResource("9_frji8")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -130.28328, 0, -9.79231)
+
+[node name="pinus_sylvestris14" parent="." instance=ExtResource("9_frji8")]
+transform = Transform3D(4.8066106, 0, 5.824216, 0, 8.21621, 0, -4.6146913, 0, 6.0664372, -128.50319, 0, 1.4686193)
+
+[node name="prunus_padus24" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(5.5223203, 0, 0, 0, 5.775825, 0, 0, 0, 5.811358, -125.99827, 1.1920929e-07, -8.741051)
+
+[node name="betula_utilis15" parent="." instance=ExtResource("11_ok0ku")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -125.07347, 1.1920929e-07, -0.555768)
+
+[node name="betula_pubescens9" parent="." instance=ExtResource("13_4j3wn")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -123.634056, 1.1920929e-07, 0.3830037)
+
+[node name="prunus_padus25" parent="." instance=ExtResource("6_caeh6")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -124.30348, 0, -10.275288)
+
+[node name="betula_utilis16" parent="." instance=ExtResource("11_ok0ku")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -122.5177, 1.1920929e-07, -8.3762245)
+
+[node name="betula_utilis17" parent="." instance=ExtResource("11_ok0ku")]
+transform = Transform3D(6.940257, 0, 0.9125932, 0, 7, 0, -0.9125932, 0, 6.940257, -121.803665, 0, -9.884325)
+
+[node name="prunus_padus26" parent="." instance=ExtResource("6_caeh6")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -121.93216, 0, -1.3133211)
+
+[node name="mets" parent="." instance=ExtResource("16_j3d2f")]
+transform = Transform3D(0.33053547, 0, 1.4631289, 0, 1.5, 0, -1.4631289, 0, 0.33053547, 21.00052, 5.625, -95.781364)
+
+[node name="betula_pubescens10" parent="." instance=ExtResource("13_4j3wn")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 17.566786, 9.685755e-08, -97.24418)
+
+[node name="prunus_padus28" parent="." instance=ExtResource("6_caeh6")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 20.294075, 9.685755e-08, -101.23047)
+
+[node name="pinus_sylvestris15" parent="." instance=ExtResource("9_frji8")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 14.739539, 9.685755e-08, -94.04784)
+
+[node name="betula_utilis18" parent="." instance=ExtResource("11_ok0ku")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 16.883675, 1.1920929e-07, -106.626595)
+
+[node name="prunus_padus29" parent="." instance=ExtResource("6_caeh6")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 19.985905, 0, -106.25598)
+
+[node name="betula_pubescens11" parent="." instance=ExtResource("13_4j3wn")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -57.871555, 9.685755e-08, -35.480766)
+
+[node name="alnus_spaethii16" parent="." instance=ExtResource("10_7ie1h")]
+transform = Transform3D(7.2686453, 0, 0, 0, 8.819495, 0, 0, 0, 7.199782, -58.513813, 9.685755e-08, -33.18747)
+
+[node name="alnus_spaethii17" parent="." instance=ExtResource("10_7ie1h")]
+transform = Transform3D(5.949635, 0, -3.6880674, 0, 7, 0, 3.6880674, 0, 5.949635, -59.487827, 9.685755e-08, -31.650557)
+
+[node name="prunus_padus31" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -55.454952, 9.685755e-08, -31.005447)
+
+[node name="betula_pubescens12" parent="." instance=ExtResource("13_4j3wn")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -52.375248, 9.536743e-07, -34.958775)
+
+[node name="betula_pubescens13" parent="." instance=ExtResource("13_4j3wn")]
+transform = Transform3D(9.157403, 0, 0, 0, 7.816736, 0, 0, 0, 7.797141, -59.834557, 0, -19.54965)
+
+[node name="betula_utilis19" parent="." instance=ExtResource("11_ok0ku")]
+transform = Transform3D(8.015768, 0, 0, 0, 9.181354, 0, 0, 0, 8.435733, -12.601406, 0, -40.944416)
+
+[node name="prunus_padus32" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 6.723386, -9.536743e-07, -58.49422)
+
+[node name="prunus_padus33" parent="." instance=ExtResource("6_caeh6")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 1.3800273, 9.536743e-07, -53.40631)
+
+[node name="alnus_spaethii18" parent="." instance=ExtResource("10_7ie1h")]
+transform = Transform3D(7, 0, 0, 0, 7.8297954, 0, 0, 0, 7, -1.1232873, 0, -50.689854)
+
+[node name="betula_utilis20" parent="." instance=ExtResource("11_ok0ku")]
+transform = Transform3D(7, 0, 0, 0, 7.974884, 0, 0, 0, 7, 8.493988, 0, -49.710384)
+
+[node name="pinus_sylvestris16" parent="." instance=ExtResource("9_frji8")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 13.920583, 9.536743e-07, -47.376003)
+
+[node name="pinus_sylvestris17" parent="." instance=ExtResource("9_frji8")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 5.279022, 9.536743e-07, -54.92927)
+
+[node name="prunus_padus34" parent="." instance=ExtResource("6_caeh6")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 13.073455, 1.1920929e-07, -61.329155)
+
+[node name="prunus_padus35" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 15.950676, 0, -59.99691)
+
+[node name="mets2" parent="." instance=ExtResource("16_j3d2f")]
+transform = Transform3D(0.023804393, 0, 1.0997424, 0, 1.1, 0, -1.0997424, 0, 0.023804393, 18.790243, 4.125, -59.596973)
+
+[node name="mets3" parent="." instance=ExtResource("16_j3d2f")]
+transform = Transform3D(0.70712507, 0, 0.8425995, 0, 1.0999999, 0, -0.8425995, 0, 0.70712507, 12.540915, 4.125, -41.87958)
+
+[node name="mets4" parent="." instance=ExtResource("16_j3d2f")]
+transform = Transform3D(1.0319571, 0, 0.38087294, 0, 1.0999999, 0, -0.38087294, 0, 1.0319571, -2.1726751, 4.125, -31.1991)
+
+[node name="mets5" parent="." instance=ExtResource("16_j3d2f")]
+transform = Transform3D(1.0981681, 0, 0.06345481, 0, 1.0999999, 0, -0.06345481, 0, 1.0981681, -21.268406, 4.125, -27.174078)
+
+[node name="mets6" parent="." instance=ExtResource("16_j3d2f")]
+transform = Transform3D(1.0981681, 0, 0.06345481, 0, 1.0999999, 0, -0.06345481, 0, 1.0981681, -39.835, 4.125, -25.984747)
+
+[node name="prunus_padus36" parent="." instance=ExtResource("6_caeh6")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -3.5938857, 0, -40.809105)
+
+[node name="prunus_padus37" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -9.063211, 0, -37.213295)
+
+[node name="pinus_sylvestris18" parent="." instance=ExtResource("9_frji8")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -4.651139, 0, -33.22994)
+
+[node name="prunus_padus38" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -11.919234, 0, -34.93875)
+
+[node name="betula_pubescens14" parent="." instance=ExtResource("13_4j3wn")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -9.32453, 0, -40.950665)
+
+[node name="pinus_sylvestris19" parent="." instance=ExtResource("9_frji8")]
+transform = Transform3D(4.7781863, 0, 5.115558, 0, 7, 0, -5.115558, 0, 4.7781863, -40.24075, 0, -39.977913)
+
+[node name="prunus_padus39" parent="." instance=ExtResource("6_caeh6")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -49.828564, 0, -31.539324)
+
+[node name="alnus_spaethii19" parent="." instance=ExtResource("10_7ie1h")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -47.691483, 0, -35.9687)
+
+[node name="alnus_spaethii20" parent="." instance=ExtResource("10_7ie1h")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -29.824478, -9.536743e-07, -36.382576)
+
+[node name="alnus_spaethii21" parent="." instance=ExtResource("10_7ie1h")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -33.841034, -9.536743e-07, -28.68428)
+
+[node name="prunus_padus40" parent="." instance=ExtResource("7_nne7s")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -33.21956, 0, -34.813004)
+
+[node name="betula_pubescens15" parent="." instance=ExtResource("13_4j3wn")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -26.249878, 0, -30.144985)
+
+[node name="betula_pubescens16" parent="." instance=ExtResource("13_4j3wn")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -51.252808, 0, -28.996933)
+
+[node name="pinus_sylvestris20" parent="." instance=ExtResource("9_frji8")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -47.708015, 1.1920929e-07, -29.053833)
+
+[node name="house23" parent="." instance=ExtResource("17_pw4co")]
+transform = Transform3D(-0.932128, 0, 0.36212888, 0, 1, 0, -0.36212888, 0, -0.932128, -25.64558, 0, -95.288635)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 40.093216, 0)
+light_color = Color(0.9916687, 1, 0.84765625, 1)
+shadow_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DirectionalLight3D"]
+libraries = {
+&"": SubResource("AnimationLibrary_g8aqn")
+}
+autoplay = "SunRotation"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_pw4co")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WorldEnvironment"]
+libraries = {
+&"": SubResource("AnimationLibrary_se14n")
+}
+autoplay = "SkyColor"

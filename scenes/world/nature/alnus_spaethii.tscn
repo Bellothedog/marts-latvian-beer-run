@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://besg8xhhyeva7"]
+
+[ext_resource type="PackedScene" uid="uid://xbumkiudaxhm" path="res://assets/trees/alnus_spaethii.blend" id="1_x07a1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c3shq"]
+size = Vector3(0.28759766, 1.5802002, 0.2211914)
+
+[node name="alnus_spaethii" instance=ExtResource("1_x07a1")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="alnus_spaethii2" index="0"]
+transform = Transform3D(0, 0, -1, 1, 0, 0, 0, -1, 0, -0.02680609, 0, 0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="alnus_spaethii2/StaticBody3D" index="0"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.00883789, 0.14141622, 0.013232421)
+shape = SubResource("BoxShape3D_c3shq")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dumxyxjwlch04"]
+
+[ext_resource type="PackedScene" uid="uid://c5gv6nnxfwwta" path="res://assets/trees/betula_utilis.blend" id="1_r1g81"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rljk0"]
+size = Vector3(0.11755371, 1.5802002, 0.13293457)
+
+[node name="betula_utilis" instance=ExtResource("1_r1g81")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="betula_utilis2" index="0"]
+transform = Transform3D(0, 0, -1, 1, 0, 0, 0, -1, 0, -0.02680609, 0, 0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="betula_utilis2/StaticBody3D" index="0"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.0015502926, 0.14141622, -0.044229787)
+shape = SubResource("BoxShape3D_rljk0")

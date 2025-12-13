@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://clqyq4holjhyv"]
+
+[ext_resource type="PackedScene" uid="uid://cl1qt30qyci0u" path="res://assets/buildings/houses/house1.glb" id="1_8771x"]
+[ext_resource type="Texture2D" uid="uid://d15rigxv7kq5n" path="res://assets/buildings/houses/house1_tex1.png" id="2_hya3i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dp67q"]
+albedo_texture = ExtResource("2_hya3i")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ql6j"]
+albedo_texture = ExtResource("2_hya3i")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8thb"]
+albedo_texture = ExtResource("2_hya3i")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8771x"]
+size = Vector3(8.207581, 2.1297607, 10.2443695)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hya3i"]
+size = Vector3(2.5770874, 2.1132813, 3.4278564)
+
+[node name="house12" instance=ExtResource("1_8771x")]
+
+[node name="house1" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_dp67q")
+
+[node name="house1_door1" parent="house1" index="0"]
+material_override = SubResource("StandardMaterial3D_4ql6j")
+
+[node name="house1_windows" parent="house1" index="5"]
+material_override = SubResource("StandardMaterial3D_o8thb")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="house1" index="6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="house1/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00015258789, 1.0780029, 0.008033752)
+shape = SubResource("BoxShape3D_8771x")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="house1/StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002532959, 1.0160203, 6.8807645)
+shape = SubResource("BoxShape3D_hya3i")

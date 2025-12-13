@@ -3,6 +3,9 @@ extends RigidBody3D
 @onready var car_mesh = $lada_blue
 @onready var body_mesh = $lada_blue
 @onready var ground_ray = $lada_blue/RayCast3D
+@onready var pivot = $lada_blue/CamOrigin
+@onready var springarm = $lada_blue/CamOrigin/SpringArm3D
+@export var sens = 0.5
 
 # For offsetting car mesh position relative to the sphere
 var sphere_offset = Vector3.DOWN
@@ -21,8 +24,14 @@ var turn_input = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
+func _input(event):
+	if event is InputEventMouseMotion:
+		# car_mesh.rotate_y(deg_to_rad(-event.relative.x * sens))
+		# springarm.rotate_y(deg_to_rad(-event.relative.x * sens))
+		pivot.rotate_x(deg_to_rad(-event.relative.y * sens))
+		pivot.rotation.x = clamp(pivot.rotation.x, deg_to_rad(-30), deg_to_rad(45))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -31,6 +40,9 @@ func _physics_process(delta):
 	if ground_ray.is_colliding():
 		apply_central_force(-car_mesh.global_transform.basis.z * speed_input)
 		
+	if Input.is_action_just_pressed("quit"):
+		get_tree().quit()
+	
 func _process(delta):
 	if not ground_ray.is_colliding():
 		return

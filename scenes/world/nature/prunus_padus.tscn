@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcvvyn2e21pi2"]
+
+[ext_resource type="PackedScene" uid="uid://droe1f5ec7d8m" path="res://assets/trees/prunus_padus.blend" id="1_rflu3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b7i7a"]
+size = Vector3(0.056884766, 0.3317871, 0.044006348)
+
+[node name="prunus_padus" instance=ExtResource("1_rflu3")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="prunus_padus2" index="0"]
+transform = Transform3D(0, 0, -1, 1, 0, 0, 0, -1, 0, -0.038189504, 0.013280749, 0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="prunus_padus2/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004272461, 0.15270996, 0.02011108)
+shape = SubResource("BoxShape3D_b7i7a")
